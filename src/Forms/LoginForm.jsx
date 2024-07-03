@@ -3,8 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Form, Input, Button, Typography, Row, Col, Image, theme, notification } from 'antd';
 import { loginAsync } from '../Redux/Slices/authSlice';
 import { useMediaQuery } from "react-responsive";
-const { Text } = Typography
 import { useNavigate } from 'react-router-dom';
+
+
+
+
+const { Text } = Typography
 
 const LoginForm = () => {
     const [loading, setLoading] = useState(false);

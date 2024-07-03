@@ -51,7 +51,6 @@ export const authSlice = createSlice({
                 state.email = action.payload.email;
             })
             .addCase(loginAsync.rejected, (state, action) => {
-                debugger
                 state.status = 'failed';
                 state.error = action?.payload?.message;
             })
@@ -63,6 +62,7 @@ export const authSlice = createSlice({
             .addCase(verifyOtpAsync.fulfilled, (state) => {
                 state.status = 'succeeded';
                 state.isAuthenticated = true;
+
             })
             .addCase(verifyOtpAsync.rejected, (state, action) => {
                 state.status = 'failed';
